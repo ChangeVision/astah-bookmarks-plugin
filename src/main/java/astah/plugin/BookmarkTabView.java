@@ -51,6 +51,7 @@ public class BookmarkTabView extends JPanel implements IPluginExtraTabView, Proj
     private JScrollPane scroller;
     private JButton buttonAddBookmarks;
     private JButton buttonRemoveBookmarks;
+    private JButton buttonRefreshTable;
     private JButton buttonSwapUpBookmark;
     private JButton buttonSwapDownBookmark;
 
@@ -80,6 +81,7 @@ public class BookmarkTabView extends JPanel implements IPluginExtraTabView, Proj
 
         {
             JToolBar bar = new JToolBar();
+            bar.add(buttonRefreshTable);
             bar.add(buttonAddBookmarks);
             bar.add(buttonRemoveBookmarks);
 
@@ -107,6 +109,11 @@ public class BookmarkTabView extends JPanel implements IPluginExtraTabView, Proj
         buttonRemoveBookmarks.setIcon(getIcon("images/tag_blue_delete.png"));
         buttonRemoveBookmarks.setToolTipText("Remove bookmark");
         buttonRemoveBookmarks.addActionListener(this);
+
+        buttonRefreshTable = new JButton();
+        buttonRefreshTable.setIcon(getIcon("images/table_refresh.png"));
+        buttonRefreshTable.setToolTipText("Refresh");
+        buttonRefreshTable.addActionListener(this);
 
         buttonSwapUpBookmark = new JButton("▲");
         buttonSwapUpBookmark.addActionListener(this);
@@ -218,6 +225,16 @@ public class BookmarkTabView extends JPanel implements IPluginExtraTabView, Proj
         controler.removeBookmark(models);
     }
 
+    private void RefreshTable() {
+        List models = new ArrayList();
+        for (int i = 0; i < table.getRowCount(); i++) {
+            models.add(this.tableModel.getValueAt(i, COLUMN_MODEL));
+        }
+
+        BookmarkControler controler = new BookmarkControler(this);
+        controler.updateBookmarksWithoutDescription(models);
+    }
+
     private void updateBookmark() {
         BookmarkControler controler = new BookmarkControler(this);
         Object selectedBookmark = getSelectedBookmark();
@@ -309,6 +326,10 @@ public class BookmarkTabView extends JPanel implements IPluginExtraTabView, Proj
         this.removeBookmarks();
     }
 
+    private void clickButtonRefreshTable() {
+        this.RefreshTable();
+    }
+
     private void clickButtonSwapUp() {
         this.swapBookmark(false);
     }
@@ -375,6 +396,8 @@ public class BookmarkTabView extends JPanel implements IPluginExtraTabView, Proj
      */
     @Override
     public void projectChanged(ProjectEvent arg0) {
+        BookmarkControler controler = new BookmarkControler(this);
+        controler.syncBookmarks();
     }
 
     @Override
@@ -420,6 +443,8 @@ public class BookmarkTabView extends JPanel implements IPluginExtraTabView, Proj
             this.clickButtonAddBookmarks();
         } else if (e.getSource().equals(buttonRemoveBookmarks)) {
             this.clickButtonRemoveBookmarks();
+        } else if (e.getSource().equals(buttonRefreshTable)) {
+            this.clickButtonRefreshTable();
         } else if (e.getSource().equals(buttonSwapUpBookmark)) {
             this.clickButtonSwapUp();
         } else if (e.getSource().equals(buttonSwapDownBookmark)) {

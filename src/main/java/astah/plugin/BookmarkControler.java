@@ -98,4 +98,58 @@ public class BookmarkControler {
         BookmarkManager.getInstance().removeAllBookmarkModels();
         view.update();
     }
+
+    public void updateBookmarksWithoutDescription(List<BookmarkModel> models) {
+        if (models == null || models.size() == 0) {
+            return;
+        }
+
+        AstahAccessor astah = new AstahAccessor();
+        BookmarkManager manager = BookmarkManager.getInstance();
+        boolean isAutoSave = manager.isAutoSave();
+
+        try {
+            if (isAutoSave) {
+                manager.setAutoSave(false);
+            }
+            
+            for (BookmarkModel model : models) {
+                String[] classId = getClassIdList(model);
+    
+                if (classId == null || classId.length == 0) {
+                    manager.removeBookmark(model);
+                    continue;
+                }
+    
+                IPresentation[] presentations = astah.getPresentation(classId);
+                if (presentations == null || presentations.length == 0) {
+                    manager.removeBookmark(model);
+                    continue;
+                }
+    
+                BookmarkModel modelNow = createBookmarkModel(presentations);
+                manager.updateBookmark(model, null, modelNow.getDiagramName(),
+                        modelNow.getPresentationsName(), modelNow.getClassIdList());
+            }
+    
+            if (isAutoSave) {
+                manager.saveToProject();
+                manager.setAutoSave(isAutoSave);
+            }
+            
+        } catch (Exception exp) {
+            exp.printStackTrace();
+        } finally {
+            manager.setAutoSave(isAutoSave);
+        }
+
+        view.update();
+    }
+
+    public void syncBookmarks() {
+        BookmarkManager manager = BookmarkManager.getInstance();
+        if (manager.syncBookmarks()) {
+            view.update();
+        }
+    }
 }

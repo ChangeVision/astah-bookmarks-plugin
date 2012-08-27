@@ -31,6 +31,10 @@ public class BookmarkManager {
         this.isAutoSave = isAutoSave;
     }
 
+    public boolean isAutoSave() {
+        return isAutoSave;
+    }
+
     public List<BookmarkModel> getBookmarkModels() {
         return Collections.unmodifiableList(models);
     }
@@ -116,6 +120,21 @@ public class BookmarkManager {
         if (isAutoSave) {
             saveToProject();
         }
+    }
+
+    public boolean syncBookmarks() {
+        AstahAccessor tagAccesser = new AstahAccessor();
+        JSONSaveDataConverter converter = new JSONSaveDataConverter();
+
+        String tagValue = tagAccesser.readTaggedValue(TAG_KEY_FOR_SAVE_PROJECT);
+        String json = converter.convertToJSON(models);
+
+        if (!tagValue.equals(json)) {
+            loadFromProject();
+            return true;
+        }
+
+        return false;
     }
 
 }

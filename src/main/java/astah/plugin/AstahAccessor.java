@@ -94,8 +94,31 @@ public class AstahAccessor {
 
     public boolean selectPresentation(String[] classIdList) {
 
+        try {
+            ProjectAccessor projectAccessor = ProjectAccessorFactory.getProjectAccessor();
+            IPresentation[] selectPresentation = getPresentation(classIdList);
+
+            if (selectPresentation != null && selectPresentation.length > 0) {
+                IDiagramViewManager dvm = projectAccessor.getViewManager().getDiagramViewManager();
+                dvm.open(selectPresentation[0].getDiagram());
+                dvm.showInDiagramEditor(selectPresentation[0]);
+                dvm.select(selectPresentation);
+            } else {
+                // not exist presentation
+                return false;
+            }
+
+        } catch (Exception exp) {
+            exp.printStackTrace();
+        }
+
+        return true;
+    }
+
+    public IPresentation[] getPresentation(String[] classIdList) {
+
         if (classIdList == null) {
-            return false;
+            return null;
         }
 
         final HashSet<String> presentationMap = new HashSet<String>();
@@ -113,7 +136,7 @@ public class AstahAccessor {
                     boolean ret = false;
                     try {
                         for (IPresentation pre : arg0.getPresentations()) {
-                            if (presentationMap.contains(pre.getID())) {
+                            if (presentationMap.contains(pre.getID()) && !selectPresentation.contains(pre)) {
                                 selectPresentation.add(pre);
                                 ret = true;
                                 break;
@@ -126,21 +149,16 @@ public class AstahAccessor {
                 }
             });
 
-            if (selectPresentation.size() > 0) {
-                IDiagramViewManager dvm = projectAccessor.getViewManager().getDiagramViewManager();
-                dvm.open(selectPresentation.get(0).getDiagram());
-                dvm.showInDiagramEditor(selectPresentation.get(0));
-                dvm.select(selectPresentation.toArray(new IPresentation[0]));
-            } else {
+            if (selectPresentation.size() == 0) {
                 // not exist presentation
-                return false;
+                return null;
             }
 
         } catch (Exception exp) {
             exp.printStackTrace();
+            return null;
         }
 
-        return true;
+        return selectPresentation.toArray(new IPresentation[0]);
     }
-
 }

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<plugin>
-   <extension point="com.change_vision.astah.ui.view">
-        <view
-            id="astah.plugin.BookmarkTabView"
-            type="extraTab"
-            class="astah.plugin.BookmarkTabView" />
-   </extension>
-</plugin>
