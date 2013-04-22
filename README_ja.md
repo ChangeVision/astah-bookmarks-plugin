@@ -16,7 +16,7 @@ Description
 
 How to install
 ----------------
-0. [ここからjarファイルをダウンロードします。](https://github.com/ChangeVision/astah-bookmarks-plugin/downloads)
+0. [ここからjarファイルをダウンロードします。](http://astah.change-vision.com/plugins/bookmarks/0.9.5.html)
 1. Astahのインストールフォルダの下のpluginsフォルダに本プラグインのjarファイルを置きます。
 2. Astahを起動します。
 3. 下部の拡張ビューに[bookmarks]タブが追加されています。
