@@ -8,35 +8,36 @@ Version
 
 Available for
 ----------------
-astah* UML, Professional 6.6 以降、
-astah* SysML 1.2以降、
-astah* GSN 1.0以降
+astah* UML, professional 6.6 以降、astah* SysML 1.2以降、astah* GSN 1.0以降
 
 Description
 ----------------
-クラス、ノートなどの図要素に対して、ブックマークを付けて表示を切り替えることができます。
+図上で描画された図要素に対して、ブックマークを付けることができます。
 
 How to install
 ----------------
 0. [ここからjarファイルをダウンロードします。](http://astah.change-vision.com/plugins/bookmarks/0.9.6.html)
 
-### astah* UML 6.8以降, Professional 6.8以降をご利用の場合
+### 
 1. astah* を起動し、ダウンロードしたjarファイルをツールバーにドラッグアンドドロップします。
 2. ダイアログを確認し、インストールします。
 3. astah* を再起動し、プロジェクトを開きます。
 4. 下部の拡張ビューに[bookmarks]タブが追加されています。
-![Sample Image](https://github.com/kenkenji/astah-bookmarks-plugin/raw/master/doc/screenshots/ViewImage.png)
 
-### astah* UML 6.7以前, Professional 6.7以前, SysML をご利用の場合
+
+### astah* UML、professional、SysMLをご利用の場合
 1. 上部メニュー[ヘルプ] – [プラグイン一覧] からプラグイン一覧を開きます。
 2. [インストール] ボタンをクリックし、jarファイルを選択してインストールしてください。
 3. astah* を再起動し、プロジェクトを開きます。
-4. 下部の拡張ビューに[bookmarks]タブが追加されています。
+4. 下部の拡張ビューに[bookmarks]タブが追加されます。
+[Sample Image](https://github.com/kenkenji/astah-bookmarks-plugin/raw/master/doc/screenshots/ViewImage.png)
+
+(astah* UML、professional 6.8以降をご利用の場合は、ダウンロードした.jarファイルを、astah*のツールバーにドラッグ＆ドロップすることでもインストールが可能です。)
 
 ### astah* GSN をご利用の場合
 1. <ユーザホーム>/.astah/gsn/pluginsフォルダに本プラグインのjarファイルを置きます。
 2. astah*を起動し、プロジェクトを開きます。
-3. 下部の拡張ビューに[bookmarks]タブが追加されています。
+3. 下部の拡張ビューに[bookmarks]タブが追加されます。
 
 How to use
 ----------------
