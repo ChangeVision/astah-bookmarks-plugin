@@ -40,6 +40,7 @@ How to use
 Add bookmark」をクリックすると一覧に追加されます。
 3. 一覧内でブックマークに設定した図要素をクリックすると、選択した図要素が、図の中央に表示されます。
 4. ブックマークを削除する場合は、一覧より選択後、メニューの「![Sample Image](https://github.com/kenkenji/astah-bookmarks-plugin/raw/master/doc/screenshots/tag_blue_delete.png)Remove bookmark」をクリックすると削除されます。
+
 ![How To Use](https://github.com/kenkenji/astah-bookmarks-plugin/raw/master/doc/screenshots/HowToUse.png)
 
 その他：
