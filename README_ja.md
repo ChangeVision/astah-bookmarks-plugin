@@ -4,23 +4,39 @@ Bookmarksプラグイン
 
 Version
 ----------------
-0.9.5
+0.9.6
 
 Available for
 ----------------
-Astah UML and Professional 6.6 or later
+astah* UML, Professional 6.6 以降、
+astah* SysML 1.2以降、
+astah* GSN 1.0以降
 
 Description
 ----------------
-クラス、ノートなどの図の要素に対して、ブックマークを付けて表示を切り替えることができます。
+クラス、ノートなどの図要素に対して、ブックマークを付けて表示を切り替えることができます。
 
 How to install
 ----------------
-0. [ここからjarファイルをダウンロードします。](http://astah.change-vision.com/plugins/bookmarks/0.9.5.html)
-1. Astahのインストールフォルダの下のpluginsフォルダに本プラグインのjarファイルを置きます。
-2. Astahを起動します。
-3. 下部の拡張ビューに[bookmarks]タブが追加されています。
+0. [ここからjarファイルをダウンロードします。](http://astah.change-vision.com/plugins/bookmarks/0.9.6.html)
+
+### astah* UML 6.8以降, Professional 6.8以降をご利用の場合
+1. astah* を起動し、ダウンロードしたjarファイルをツールバーにドラッグアンドドロップします。
+2. ダイアログを確認し、インストールします。
+3. astah* を再起動し、プロジェクトを開きます。
+4. 下部の拡張ビューに[bookmarks]タブが追加されています。
 ![Sample Image](https://github.com/kenkenji/astah-bookmarks-plugin/raw/master/doc/screenshots/ViewImage.png)
+
+### astah* UML 6.7以前, Professional 6.7以前, SysML をご利用の場合
+1. 上部メニュー[ヘルプ] – [プラグイン一覧] からプラグイン一覧を開きます。
+2. [インストール] ボタンをクリックし、jarファイルを選択してインストールしてください。
+3. astah* を再起動し、プロジェクトを開きます。
+4. 下部の拡張ビューに[bookmarks]タブが追加されています。
+
+### astah* GSN をご利用の場合
+1. <ユーザホーム>/.astah/gsn/pluginsフォルダに本プラグインのjarファイルを置きます。
+2. astah*を起動し、プロジェクトを開きます。
+3. 下部の拡張ビューに[bookmarks]タブが追加されています。
 
 How to use
 ----------------
@@ -37,11 +53,11 @@ Add bookmark」をクリックすると一覧に追加されます。
 その他：
 * Descriptionを任意に編集することができます。ダブルクリック、または、選択後Enterキーにて編集を行います。
 * 左部「▲」「▼」ボタンにて順序を入れ替えることができます。また、Ctrl＋↑キー、Ctrl＋↓キーでも同様な操作となります。
-* 「![Sample Image](https://github.com/kenkenji/astah-bookmarks-plugin/raw/master/doc/screenshots/table_refresh.png)Refresh」ボタンをクリックすると一覧表を更新します。図の要素が削除されている場合は、一覧からも削除されます。[[BR]]
+* 「![Sample Image](https://github.com/kenkenji/astah-bookmarks-plugin/raw/master/doc/screenshots/table_refresh.png)Refresh」ボタンをクリックすると一覧表を更新します。図の要素が削除されている場合は、一覧からも削除されます。
 
 License
 ---------------
-Copyright 2012 Change Vision, Inc.
+Copyright 2014 Change Vision, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this work except in compliance with the License.
