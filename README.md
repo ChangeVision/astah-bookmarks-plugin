@@ -26,7 +26,7 @@ How to install
 3. Now you will have [bookmarks] tab below the diagram editor
 
 ###[If you are using Astah GSN]
-1. Save the .jar file under Userhome/.astag/gsn/plugins
+1. Save the .jar file under Userhome/.astah/gsn/plugins
 2. Restart Astah
 3. Now you will have [bookmarks] tab below the diagram editor
 
