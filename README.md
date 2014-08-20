@@ -8,8 +8,10 @@ Version
 
 Available for
 ----------------
-Astah Professional and UML 6.6 or later, Astah SysML 1.2 or later and Astah GSN 1.0 or later
-http://astah.net/
+Astah Professional and UML 6.6 or later,
+Astah SysML 1.2 or later
+Astah GSN 1.0 or later
+Astah website: http://astah.net/
 
 Description
 ----------------
@@ -19,11 +21,11 @@ How to install
 ----------------
 [Download Astah Bookmark Plug-in](http://astah.change-vision.com/plugins/bookmarks/0.9.6.html)
 
-[If you are using Astah Professional or Astah SysML]
+###[If you are using Astah Professional or Astah SysML]
 1. Launch Astah and go to [Help] - [Plugin List]
 2. Click [Install] button and select the .jar file you donwloaded and restart Astah
 
-[If you are using Astah GSN]
+###[If you are using Astah GSN]
 1. Save the .jar file under Userhome/.astag/gsn/plugins
 2. Restart Astah
 
