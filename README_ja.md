@@ -16,7 +16,7 @@ Description
 
 How to install
 ----------------
-0. [ここから、プラグイン.jarファイルをダウンロードします。](http://astah.change-vision.com/plugins/bookmarks/0.9.6.html)
+[ここから、プラグイン.jarファイルをダウンロードします。](http://astah.change-vision.com/plugins/bookmarks/0.9.6.html)
 
 ### astah* UML、professional、SysMLをご利用の場合
 1. 上部メニュー[ヘルプ] – [プラグイン一覧] からプラグイン一覧を開きます。
