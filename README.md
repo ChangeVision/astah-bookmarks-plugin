@@ -8,9 +8,7 @@ Version
 
 Available for
 ----------------
-Astah Professional and UML 6.6 or later,
-Astah SysML 1.2 or later
-Astah GSN 1.0 or later
+Astah Professional (6.6 or later), Astah SysML (1.2 or later), Astah GSN (1.0 or later)
 Astah website: http://astah.net/
 
 Description
