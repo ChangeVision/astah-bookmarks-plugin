@@ -67,4 +67,4 @@ limitations under the License.
 
 Icons by famfamfam silk icons 
 ----------------
-<http://famfamfam.com/>
+<http://famfamfam.com/lab/icons/silk/>
