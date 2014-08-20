@@ -33,7 +33,7 @@ How to install
 
 How to use
 ----------------
-基本操作：
+### 基本操作
 
 1. クラス図のクラスなどを選択状態にします。
 2. メニューより「![Sample Image](https://github.com/kenkenji/astah-bookmarks-plugin/raw/master/doc/screenshots/tag_blue_add.png)
@@ -43,7 +43,7 @@ Add bookmark」をクリックすると一覧に追加されます。
 
 ![How To Use](https://github.com/kenkenji/astah-bookmarks-plugin/raw/master/doc/screenshots/HowToUse.png)
 
-その他：
+### その他
 * ブックマークデータは、プロジェクトの保存時に.astahファイルに保存されます。
 
 * Descriptionを任意に編集することができます。ダブルクリック、または、選択後Enterキーにて編集を行います。
