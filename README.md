@@ -24,11 +24,11 @@ How to install
 ###[If you are using Astah Professional or Astah SysML]
 1. Launch Astah and go to [Help] - [Plugin List]
 2. Click [Install] button and select the .jar file you donwloaded and restart Astah
+3. Now you will have [bookmarks] tab below the diagram editor
 
 ###[If you are using Astah GSN]
 1. Save the .jar file under Userhome/.astag/gsn/plugins
 2. Restart Astah
-
 3. Now you will have [bookmarks] tab below the diagram editor
 
 How to use
