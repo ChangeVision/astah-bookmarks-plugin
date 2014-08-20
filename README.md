@@ -8,8 +8,9 @@ Version
 
 Available for
 ----------------
-Astah Professional (6.6 or later), Astah SysML (1.2 or later), Astah GSN (1.0 or later)
-Astah website: http://astah.net/
+* [Astah Professional](http://astah.net/editions/professional) 6.6 or later
+* [Astah SysML](http://astah.net/editions/sysml) 1.2 or later
+* [Astah GSN](http://astah.net/editions/gsn) 1.0 or later
 
 Description
 ----------------
@@ -57,4 +58,4 @@ limitations under the License.
 
 Icons by famfamfam silk icons 
 ----------------
-<http://famfamfam.com/>
+<http://famfamfam.com/lab/icons/silk/>
