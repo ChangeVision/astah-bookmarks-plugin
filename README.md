@@ -4,22 +4,30 @@ Astah Bookmark Plug-in
 
 Version
 ----------------
-0.9.5
+0.9.6
 
 Available for
 ----------------
-Astah Professional and UML 6.6 or later
+Astah Professional and UML 6.6 or later, Astah SysML 1.2 or later and Astah GSN 1.0 or later
 http://astah.net/
 
 Description
 ----------------
-You are able to bookmark model elements such as Classes, Notes and have them in the list.
+You are able to bookmark model elements such as Classes, Notes and have them in the Bookmark list.
 
 How to install
 ----------------
-1. [Download Astah Bookmark Plug-in](http://astah.change-vision.com/plugins/bookmarks/0.9.5.html) and save the "bookmarks-x.x.x.jar" file in the "plug-ins" folder under Astah Installation folder
-2. Launch Astah
-3. [Bookmarks] tab appears in the bottom pane
+[Download Astah Bookmark Plug-in](http://astah.change-vision.com/plugins/bookmarks/0.9.6.html)
+
+[If you are using Astah Professional or Astah SysML]
+1. Launch Astah and go to [Help] - [Plugin List]
+2. Click [Install] button and select the .jar file you donwloaded and restart Astah
+
+[If you are using Astah GSN]
+1. Save the .jar file under Userhome/.astag/gsn/plugins
+2. Restart Astah
+
+3. Now you will have [bookmarks] tab below the diagram editor
 
 How to use
 ----------------
@@ -33,7 +41,7 @@ This is very useful when you want to have a list of model elements to re-check o
 
 License
 ---------------
-Copyright 2012 Change Vision, Inc.
+Copyright 2014 Change Vision, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this work except in compliance with the License.
